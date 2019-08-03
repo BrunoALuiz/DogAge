@@ -9,17 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var txtDogAge: UITextField!
+    @IBOutlet weak var result: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func showAge(_ sender: UIButton) {
+        let dogAge = Int(txtDogAge.text!)! * 7
+        result.text = "A idade do cachorro em anos humanos é: \(dogAge)"
     }
-
 
 }
 
